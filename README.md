@@ -27,7 +27,8 @@ This project provides IMU, VICON and camera data. Using these, it is required to
 4. Run the file project_1.py
 
         python project_1.py
-5. When prompted, enter the dataset number to run the code on. Enter an integer from 1 to 11.
+5. When prompted, enter the folder path where __both__ traindata and testdata folders are located.
+6. When prompted, enter the dataset number to run the code on. __Enter an integer from 1 to 11__.
 
 ## Miscellaneous Information
 The datasets are labelled 1-11. Datasets 1, 2, 8, 9, 10, 11 have camera data, so they will create 2 types of panoramas: [Lambert azimuthal equal-area projection](https://en.wikipedia.org/wiki/Lambert_azimuthal_equal-area_projection) and [Cylindrical projection from Spherical World coordinates](https://natanaso.github.io/ece276a/ref/ECE276A_5_LocalizationOdometry.pdf#page=13).
