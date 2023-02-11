@@ -51,7 +51,7 @@ def run_grad(Q, cost_fun, iterations=100, step_size=0.05):
     for iter in tqdm(range(iterations)):
         C = jax.grad(cost_fun)(Q_iters[-1] + perturb)
         Q_iters.append(Q_iters[-1]-(step_size)*C)
-    print(time.now()-start)
+    print(time.time()-start)
     return Q_iters
 
 
@@ -157,7 +157,7 @@ if __name__ == '__main__':
         vicd = create_vicd(imud['ts'][:, :R.shape[1]],
                            R) if not has_vic[i] else vicd
         print('Dataset {} processed in {}'.format(
-            dataset_number[i], str(time.now()-start)))
+            dataset_number[i], str(time.time()-start)))
 
         if has_cam[i]:
             print('Starting construction of panorama')
@@ -170,5 +170,5 @@ if __name__ == '__main__':
                 'panorama_{}.jpg'.format(dataset_number[i]))
             print('Image stored')
 
-        print('Time elapsed: ', time.now()-start)
+        print('Time elapsed: ', time.time()-start)
         break
