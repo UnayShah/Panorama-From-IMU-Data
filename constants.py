@@ -1,8 +1,8 @@
-import jax
 import jax.numpy as jnp
-from jax.config import config; config.update("jax_enable_x64", True)
+from jax.config import config
+config.update("jax_enable_x64", True)
 '''Constant data from datasheet'''
-Vref_acc = 3.3*1000 # in mV
+Vref_acc = 3.3*1000  # in mV
 Vref_gyro = 3.3*1000  # in mV (not same as the sheet)
 sensitivity_acc = 300
 sensitivity_gyro = 3.33*180/jnp.pi
