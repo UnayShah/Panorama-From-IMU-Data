@@ -8,7 +8,7 @@ config.update("jax_enable_x64", True)
 '''Create panoramas'''
 
 
-def create_panorama(vicd, camd):
+def create_panorama(vicd, camd, fast):
     cam_time_map = {}
     HEIGHT, WIDTH = 960, 1920
     for t in camd['ts'][0]:
@@ -68,7 +68,7 @@ def create_panorama(vicd, camd):
     print('Created spherical projection map\nCreating image:')
 
     image = np.zeros((HEIGHT, WIDTH, 3)).astype(np.int32)
-    for r in tqdm(range(camd['cam'].shape[3])):
+    for r in tqdm(range(0, camd['cam'].shape[3], 30 if fast else 1)):
         for i in range(camd['cam'].shape[0]):
             for j in range(camd['cam'].shape[1]):
                 _, x, y = spherical_from_cartesian[i, j, :, r]
@@ -77,7 +77,7 @@ def create_panorama(vicd, camd):
     return image
 
 
-def create_panorama_lambert(vicd, camd):
+def create_panorama_lambert(vicd, camd, fast):
     cam_time_map = {}
     for t in camd['ts'][0]:
         temp = np.abs(vicd['ts'][0] - t)
@@ -121,7 +121,7 @@ def create_panorama_lambert(vicd, camd):
     print('Created lambert azimuthal projection map\nCreating image:')
 
     image = np.zeros((1000, 1000, 3)).astype(np.int32)
-    for r in tqdm(range(camd['cam'].shape[3])):
+    for r in tqdm(range(0, camd['cam'].shape[3], 30 if fast else 1)):
         for i in range(240):
             for j in range(320):
                 x, y = abs_lamb[i, j, :, r]

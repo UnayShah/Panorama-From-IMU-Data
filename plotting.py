@@ -1,4 +1,4 @@
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
 import transforms3d
 import jax.numpy as jnp
