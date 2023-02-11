@@ -51,16 +51,16 @@ Here are the results obtained from dataset 8:
 
 __Euler angle comparison for dataset 8:__
 
-![Euler angle comparison for dataset 8](https://github.com/UnayShah/ece276A_pr1/plots/8_W.jpg)
+![Euler angle comparison for dataset 8](https://github.com/UnayShah/ece276A_pr1/blob/master/plots/8_W.jpg)
 
 __Linear acceleration comparison for dataset 8__
 
-![Linear acceleration comparison for dataset 8](https://github.com/UnayShah/ece276A_pr1/plots/8_A.jpg)
+![Linear acceleration comparison for dataset 8](https://github.com/UnayShah/ece276A_pr1/blob/master/plots/8_A.jpg)
 
 __Lambert Azimuthal panorama for dataset 8__
 
-![Lambert Azimuthal panorama for dataset 8](https://github.com/UnayShah/ece276A_pr1/plots/panorama_lamber_8.jpg)
+![Lambert Azimuthal panorama for dataset 8](https://github.com/UnayShah/ece276A_pr1/blob/master/plots/panorama_lamber_8.jpg)
 
 __Cylindrical panorama for dataset 8__
 
-![Cylindrical panorama for dataset 8](https://github.com/UnayShah/ece276A_pr1/plots/panorama_8.jpg)
+![Cylindrical panorama for dataset 8](https://github.com/UnayShah/ece276A_pr1/blob/master/plots/panorama_8.jpg)
