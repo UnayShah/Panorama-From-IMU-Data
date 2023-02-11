@@ -27,6 +27,11 @@ This project provides IMU, VICON and camera data. Using these, it is required to
 4. Run the file project_1.py
 
         python project_1.py
+    If you want to run the panorama faster (by skipping a few images), you can run it as follows
+
+        python project_1.py fast
+
+        
 5. When prompted, enter the folder path where __both__ traindata and testdata folders are located.
 6. When prompted, enter the dataset number to run the code on. __Enter an integer from 1 to 11__.
 
