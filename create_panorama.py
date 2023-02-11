@@ -46,8 +46,7 @@ def create_panorama(vicd, camd, fast):
 
     spherical_from_cartesian = np.zeros((H, W, 3, camd['cam'].shape[3]))
 
-    spherical_from_cartesian_r = np.sqrt(
-        np.sum(np.power(world_frame_cartesian, 2), axis=2))
+    spherical_from_cartesian_r = np.linalg.norm(world_frame_cartesian, axis=2)
     spherical_from_cartesian[:, :, 0,
                              :] = spherical_from_cartesian_r  # rho => z
     spherical_from_cartesian[:, :, 1, :] = np.arctan2(
