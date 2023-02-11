@@ -1,9 +1,10 @@
-from create_panorama import *
-from plotting import *
-from quaternion_operations import *
-from preprocess_data import *
-from load_data import *
-from constants import *
+from methods.create_panorama import *
+from methods.plotting import *
+from methods.quaternion_operations import *
+from methods.preprocess_data import *
+from methods.load_data import *
+from methods.constants import *
+
 from tqdm import tqdm
 import time
 
@@ -88,7 +89,8 @@ has_vic = [True, True, True, True, True, True, True, True, True, False,  False]
 if __name__ == '__main__':
     args = sys.argv[1:]
     try:
-        fast = bool(args[0]=='True' or args[0]=='true' or args[0]=='fast') if args else False
+        fast = bool(args[0] == 'True' or args[0] ==
+                    'true' or args[0] == 'fast') if args else False
     except:
         fast = False
     while True:
@@ -101,7 +103,7 @@ if __name__ == '__main__':
         print('Calculations for dataset {}'.format(dataset_number[i]))
         start = time.time()
         S1_loss, S2_loss = [], []
-        
+
         try:
             camd, imud, vicd = load_data(
                 folder_path, dataset_number[i], dataset_folder[i], has_cam[i], has_vic[i])
